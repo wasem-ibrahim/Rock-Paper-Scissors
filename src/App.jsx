@@ -15,7 +15,7 @@ function App() {
   function chooseIcon(choice) {
     if (choice == "rock") return <FaRegHandRock size={40} />;
     else if (choice == "paper") return <FaRegHandPaper size={40} />;
-    else return <FaRegHandScissors size={40} />;
+    else return <FaRegHandScissors className="rotate-90" size={40} />;
   }
   function clickHandler(e) {
     setuserChoice(e.target.innerText);
@@ -41,14 +41,18 @@ function App() {
         <h1>welcome to Rock Paper Scisorrs</h1>
 
         {/* Icons of the choices */}
-        <div>
-          <h1> user choice:</h1>
-          <div>{chooseIcon(userChoice)}</div>
-          {/* <img src={`../public/images/${userChoice}.jpg`} alt="paper"></img> */}
-        </div>
-        <div>
-          <h1> computer choice:</h1>
-          {chooseIcon(computerChoice)}
+        <div className="flex gap-4">
+          <div>
+            <div className="w-10 h-10 rotate-90">{chooseIcon(userChoice)}</div>
+            <h1> user choice:</h1>
+            {/* <img src={`../public/images/${userChoice}.jpg`} alt="paper"></img> */}
+          </div>
+          <div>
+            <div className="w-10 h-10 -rotate-90 transform -scale-x-100">
+              {chooseIcon(computerChoice)}
+            </div>
+            <h1> computer choice:</h1>
+          </div>
         </div>
 
         {/* Scorings */}
