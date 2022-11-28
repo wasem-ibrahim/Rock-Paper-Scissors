@@ -103,7 +103,7 @@ export function Main() {
                     <br />
                     <div className="flex w-full gap-2">
                       <button
-                        className="w-full duration-300 button hover:text-white hover:bg-black"
+                        className="w-full  button duration-300 hover:text-white hover:bg-black"
                         onClick={() => window.location.reload()}>
                         yes
                       </button>
