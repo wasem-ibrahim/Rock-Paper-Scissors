@@ -10,7 +10,7 @@ export function Welcoming() {
 
   return (
     <>
-      <div className="w-full h-screen text-white border-2 border-red-600 bg-gradient-to-tr from-indigo-500 via-purple-500 to-black">
+      <div className="w-full h-screen text-white bg-gradient-to-tr from-indigo-500 via-purple-500 to-black">
         {/* Navbar */}
         <Navbar />
 

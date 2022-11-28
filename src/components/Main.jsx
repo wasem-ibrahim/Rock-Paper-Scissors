@@ -33,65 +33,67 @@ export function Main() {
 
   return (
     <>
-      <nav className="flex justify-between items-center w-[98%] mx-auto py-4">
-        <img src="images/logo.png" alt="rps" className="w-20 h-20" />
-        <button
-          className="p-4 duration-300 border-2 rounded-lg cursor-pointer hover:bg-white hover:text-black border-white-400"
-          onClick={() => setShowAbout(true)}>
-          About
-        </button>
-      </nav>
+      <div className="w-full h-screen text-white  bg-gradient-to-tr from-indigo-500 via-purple-500 to-black">
+        <nav className="flex justify-between items-center w-[98%] mx-auto py-4">
+          <img src="images/logo.png" alt="rps" className="w-20 h-20" />
+          <button
+            className="p-4 duration-300 border-2 rounded-lg cursor-pointer hover:bg-white hover:text-black border-white-400"
+            onClick={() => setShowAbout(true)}>
+            About
+          </button>
+        </nav>
 
-      <main className="flex flex-col items-center justify-center h-screen text-6xl bg-gray-200">
-        <div className="">
-          <h1 className="py-4">Round {round}</h1>
+        <main className="flex flex-col items-center justify-center text-6xl">
+          <div>
+            <h1 className="py-4">Round {round}</h1>
 
-          {/* Icons of the choices */}
-          <Images userChoice={userChoice} computerChoice={computerChoice} />
+            {/* Icons of the choices */}
+            <Images userChoice={userChoice} computerChoice={computerChoice} />
 
-          {/* Scorings */}
-          <div className="flex flex-col items-center">
-            <p> your points: {userPoints}</p>
-            <p> computer points: {computerPoints}</p>
-          </div>
-
-          {/* buttons to choose from, hidden when game ends*/}
-          {winner.length == 0 && (
-            <div className="flex justify-between">
-              <button className="button" onClick={clickHandler}>
-                rock
-              </button>
-              <button className="button" onClick={clickHandler}>
-                paper
-              </button>
-              <button className="button" onClick={clickHandler}>
-                scissors
-              </button>
+            {/* Scorings */}
+            <div className="flex flex-col items-center">
+              <p> your points: {userPoints}</p>
+              <p> computer points: {computerPoints}</p>
             </div>
-          )}
 
-          {/* winner screen */}
-          {winner.length > 0 && (
-            <div className="flex flex-col items-center justify-center">
-              <p>Congrats to {winner}!</p>
-              {/* asking to play again */}
-              {wannaPlay != "no" && (
-                <div>
-                  <h1>do you wanna play again?</h1>
-                  <div className="flex items-center justify-center">
-                    <button className="mb-2 button" onClick={() => window.location.reload()}>
-                      yes
-                    </button>
-                    <button className="button" onClick={() => setWannaPlay("no")}>
-                      no
-                    </button>
+            {/* buttons to choose from, hidden when game ends*/}
+            {winner.length == 0 && (
+              <div className="flex justify-between">
+                <button className="button" onClick={clickHandler}>
+                  rock
+                </button>
+                <button className="button" onClick={clickHandler}>
+                  paper
+                </button>
+                <button className="button" onClick={clickHandler}>
+                  scissors
+                </button>
+              </div>
+            )}
+
+            {/* winner screen */}
+            {winner.length > 0 && (
+              <div className="flex flex-col items-center justify-center">
+                <p>Congrats to {winner}!</p>
+                {/* asking to play again */}
+                {wannaPlay != "no" && (
+                  <div>
+                    <h1>do you wanna play again?</h1>
+                    <div className="flex items-center justify-center">
+                      <button className="mb-2 button" onClick={() => window.location.reload()}>
+                        yes
+                      </button>
+                      <button className="button" onClick={() => setWannaPlay("no")}>
+                        no
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      </main>
+                )}
+              </div>
+            )}
+          </div>
+        </main>
+      </div>
     </>
   );
 }
