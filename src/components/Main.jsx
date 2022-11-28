@@ -105,7 +105,7 @@ export function Main() {
                       <button
                         className="w-full  button duration-300 hover:text-white hover:bg-black"
                         onClick={() => window.location.reload()}>
-                        yes
+                        Yes!
                       </button>
                       <Link
                         className="w-full p-2 text-center duration-300 border-4 border-black border-solid rounded-full hover:text-white hover:bg-black md:p-4 lg:p-8"
