@@ -1,10 +1,15 @@
 .spinAscend {
   bottom: 0px;
+  opacity: 0;
   animation: spin-ascend 13s linear infinite;
 }
 
 @keyframes spin-ascend {
+  1% {
+    opacity: 1;
+  }
   100% {
+    opacity: 2;
     margin-bottom: 105vh;
     transform: rotate(360deg);
   }
@@ -24,4 +29,27 @@
 
 .testing4 {
   animation-delay: 12s;
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

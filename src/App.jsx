@@ -1,5 +1,5 @@
 import React from "react";
-import { Main, Images, Welcoming } from "./components";
+import { Main, Images, Welcoming, Navbar } from "./components";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
