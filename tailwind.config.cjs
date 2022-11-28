@@ -6,6 +6,9 @@ module.exports = {
       scale: {
         "-100": "-1",
       },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   plugins: [],

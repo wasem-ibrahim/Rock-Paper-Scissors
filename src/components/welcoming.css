@@ -1,0 +1,27 @@
+.spinAscend {
+  bottom: 0px;
+  animation: spin-ascend 13s linear infinite;
+}
+
+@keyframes spin-ascend {
+  100% {
+    margin-bottom: 105vh;
+    transform: rotate(360deg);
+  }
+}
+
+.testing {
+  animation-delay: 3s;
+}
+
+.testing2 {
+  animation-delay: 6s;
+}
+
+.testing3 {
+  animation-delay: 9s;
+}
+
+.testing4 {
+  animation-delay: 12s;
+}

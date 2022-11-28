@@ -4,6 +4,7 @@
 
 @layer components{
     .button{
-        @apply border-solid border-4 p-1 rounded-xl
+        @apply border-solid border-4 p-1 rounded-3xl border-black
     }
-}   
+}  
+
