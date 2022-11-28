@@ -10,28 +10,13 @@ export function Welcoming() {
 
   return (
     <>
-      <div className="w-full h-screen text-white bg-gradient-to-tr from-indigo-500 via-purple-500 to-black">
+      <div className="w-full h-screen text-white  bg-gradient-to-tr from-indigo-500 via-purple-500 to-black">
         {/* Navbar */}
-        <Navbar />
+        <Navbar setShowAbout={setShowAbout} />
 
-        {/* Sliding HI */}
+        {/* Bouncing HI*/}
         <div className="absolute top-[25%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[200px] text-black">
           <div className="animate-bounce">HI</div>
-        </div>
-
-        {/* Choosing the opiton */}
-        <div className="flex flex-col text-black text-6xl   justify-center items-center h-screen">
-          <div className="border-black border-4 p-8 rounded-2xl">
-            <div>Choose Who You You'd Like To Play Against:</div>
-            <div className="flex gap-8 justify-center py-8">
-              <Link className="cursor-pointer border-white border-2 p-4 rounded-full" to={"main"}>
-                Computer
-              </Link>
-              <Link className="cursor-pointer border-white border-2 p-4 rounded-full" to={"main"}>
-                Friend
-              </Link>
-            </div>
-          </div>
         </div>
 
         {/* Showing and hiding the about menu */}
@@ -76,34 +61,55 @@ export function Welcoming() {
 
         {/* Floating Icons */}
         <div>
-          <div className="flex justify-around absolute w-full bottom-[0]  ">
-            <FaRegHandRock size={30} className="spinAscend" />
-            <FaRegHandScissors size={30} className="spinAscend" />
-            <FaRegHandPaper size={30} className="spinAscend" />
-            <FaRegHandRock size={30} className="spinAscend" />
-            <FaRegHandPaper size={30} className="spinAscend" />
+          <div className="z-[-1]">
+            <div className="flex justify-around absolute w-full bottom-[0]   z-[-1]">
+              <FaRegHandRock size={30} className="spinAscend" />
+              <FaRegHandScissors size={30} className="spinAscend" />
+              <FaRegHandPaper size={30} className="spinAscend" />
+              <FaRegHandRock size={30} className="spinAscend" />
+              <FaRegHandPaper size={30} className="spinAscend" />
+            </div>
+
+            <div className="flex justify-around absolute w-full bottom-[0]  z-[2]">
+              <FaRegHandRock size={30} className="spinAscend testing" />
+              <FaRegHandPaper size={30} className="spinAscend testing" />
+              <FaRegHandRock size={30} className="spinAscend testing" />
+              <FaRegHandPaper size={30} className="spinAscend testing" />
+            </div>
+
+            <div className="flex justify-around absolute w-full bottom-[0]  z-[2]">
+              <FaRegHandRock size={30} className="spinAscend testing2" />
+              <FaRegHandPaper size={30} className="spinAscend testing2" />
+              <FaRegHandRock size={30} className="spinAscend testing2" />
+              <FaRegHandPaper size={30} className="spinAscend testing2" />
+              <FaRegHandRock size={30} className="spinAscend testing2" />
+            </div>
+
+            <div className="flex justify-around absolute w-full bottom-[0]  z-[2]">
+              <FaRegHandRock size={30} className="spinAscend testing3" />
+              <FaRegHandPaper size={30} className="spinAscend testing3" />
+              <FaRegHandPaper size={30} className="spinAscend testing3" />
+              <FaRegHandRock size={30} className="spinAscend testing3" />
+            </div>
           </div>
 
-          <div className="flex justify-around absolute w-full bottom-[0]  ">
-            <FaRegHandRock size={30} className="spinAscend testing" />
-            <FaRegHandPaper size={30} className="spinAscend testing" />
-            <FaRegHandRock size={30} className="spinAscend testing" />
-            <FaRegHandPaper size={30} className="spinAscend testing" />
-          </div>
-
-          <div className="flex justify-around absolute w-full bottom-[0] ">
-            <FaRegHandRock size={30} className="spinAscend testing2" />
-            <FaRegHandPaper size={30} className="spinAscend testing2" />
-            <FaRegHandRock size={30} className="spinAscend testing2" />
-            <FaRegHandPaper size={30} className="spinAscend testing2" />
-            <FaRegHandRock size={30} className="spinAscend testing2" />
-          </div>
-
-          <div className="flex justify-around absolute w-full bottom-[0] ">
-            <FaRegHandRock size={30} className="spinAscend testing3" />
-            <FaRegHandPaper size={30} className="spinAscend testing3" />
-            <FaRegHandPaper size={30} className="spinAscend testing3" />
-            <FaRegHandRock size={30} className="spinAscend testing3" />
+          {/* Choosing the opiton */}
+          <div className="flex flex-col text-black text-6xl   justify-center items-center h-screen ">
+            <div className="border-black border-4 p-8 rounded-2xl">
+              <div>Choose Who You You'd Like To Play Against:</div>
+              <div className="flex gap-8 justify-center py-8">
+                <Link
+                  className="cursor-pointer border-white border-2 p-4 rounded-full z-[2]"
+                  to={"main"}>
+                  Computer
+                </Link>
+                <Link
+                  className="cursor-pointer border-white border-2 p-4 rounded-full z-[2]"
+                  to={"main"}>
+                  Friend
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
